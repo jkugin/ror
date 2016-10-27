@@ -1,6 +1,6 @@
 require 'test/unit'
 require 'test/unit/ui/console/testrunner'
-require 'polynomial'
+require_relative 'polynomial'
  
 class PolynomialTest < Test::Unit::TestCase
   def setup

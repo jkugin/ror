@@ -1,6 +1,6 @@
 require 'test/unit'
 require 'test/unit/ui/console/testrunner'
-require 'dictionary_search'
+require_relative 'dictionary_search'
 
 class DictionarySearchTest < Test::Unit::TestCase
   def setup

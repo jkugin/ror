@@ -15,6 +15,8 @@ class Polynomial
               polinom << nil
           elsif @elements[i]==1
               polinom << "+x^#{i}"
+          elsif @elements[i]==-1
+              polinom << "-x^#{i}"
           elsif @elements[i]<0
               polinom << "#{@elements[i]}x^#{i}"
           else
@@ -33,7 +35,7 @@ class Polynomial
       end
       
       if polinom.reject{|i| i==nil}.empty?
-          polinom = ['0']
+          polinom = "0"
       elsif polinom.join.chr=="+"
           polinom.join.reverse!.chop!.reverse!
       else
