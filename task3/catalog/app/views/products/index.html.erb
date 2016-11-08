@@ -1,0 +1,40 @@
+<%= link_to 'new product', new_product_path %>
+
+<table>
+	<tr>
+		<th>
+			partnumber
+		</th>
+		<th>
+			name
+		</th>
+		<th>
+			discount_cod
+		</th>
+	</tr>
+	
+	<% @products.each do |product| %>
+		<tr>
+			<td>
+				<%= product.partnumber %>
+			</td>
+			<td>
+				<%= product.name %>
+			</td>
+			<td>
+				<%= product.discount_cod %>
+			</td>
+			<td>
+				<%= link_to 'Edit', edit_product_path(product) %>
+			</td>
+			<td>
+				<%= link_to 'Show', product_path(product) %>
+			</td>
+			<td>
+				<%= link_to 'destroy', product_path(product),
+				method: :delete,
+				data: { confirm: 'hohoho?'}%>
+			</td>
+		</tr>
+	<% end %>
+</table>

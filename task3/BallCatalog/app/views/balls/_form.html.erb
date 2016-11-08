@@ -1,0 +1,17 @@
+<%= form_for @ball do |b| %>
+<p>
+<%= b.label :name %><br>
+<%= b.text_field :name %>
+</p>
+<p>
+<%= b.label :material %><br>
+<%= b.text_field :material %>
+</p>
+<p>
+<%= b.label :stars %>
+<%= b.number_field :stars %>
+</p>
+<p>
+<%= b.submit %>
+</p>
+<% end %>

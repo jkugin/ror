@@ -1,0 +1,17 @@
+ <%= form_for @client do |c| %>
+ <p>
+	<%= c.label :name %>
+	<%= c.text_field :name %>
+ </p>
+ <p>
+	<%= c.label :lastname %>
+	<%= c.text_field :lastname %>
+ </p>
+ <p>
+	<%= c.label :firm %>
+	<%= c.text_field :firm %>
+ </p>
+ <p>
+	<%= c.submit %>
+</p>
+<% end %>

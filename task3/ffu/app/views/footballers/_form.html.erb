@@ -1,0 +1,18 @@
+<%= form_for @footballer do |f| %>
+	<p>
+		<%= f.label :name %><br>
+		<%= f.text_field :name%>
+	</p>
+	<p>
+		<%= f.label :age%><br>
+		<%= f.number_field :age %>
+	</p>
+	<p>
+		<%= f.label :club %><br>
+		<%= f.text_field :club %>
+	</p>
+	
+	<p>
+		<%= f.submit %>
+	</p>
+<% end %>
