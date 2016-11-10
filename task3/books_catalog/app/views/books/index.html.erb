@@ -1,0 +1,39 @@
+<h1> catalog </h1>
+
+<table>
+	<tr>
+		<th>
+			author
+		</th>
+		<th>
+			title
+		</th>
+	</tr>
+	<% @books.each do |b| %>
+		<tr>
+			<td>
+				<%= b.author %>
+			</td>
+			<td>
+				<%= b.title %>
+			</td>
+			<td>
+				<%= link_to 'show', book_path(b) %>
+			</td>
+			<td>
+				<%= link_to 'edit', edit_book_path(b) %>
+			</td>
+			<td>
+				<%= link_to 'destroy', book_path(b),
+				method: :delete,
+				data: {confirm: "yes?"} %>
+			</td>
+		</tr>
+	<% end %>
+
+</table>
+
+ 
+<p>
+	<%= link_to 'new', new_book_path %>
+</p>
