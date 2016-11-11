@@ -1,0 +1,15 @@
+<%= form_for @tank do |t| %>
+<p>
+	<%= t.label :tankname %>
+	<%= t.text_field :tankname %>
+</p>
+<p>
+	<%= t.label :gun %>
+	<%= t.number_field :gun %>
+</p>
+<p>
+	<%= t.submit 'tank' %>
+</p>
+<% end %>
+
+<%= link_to 'catalog', tanks_path %>
