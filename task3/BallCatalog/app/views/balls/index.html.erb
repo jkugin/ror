@@ -1,0 +1,41 @@
+<h1>balls</h1> 
+
+	<table>
+		<tr>
+			<th>
+				Name
+			</th>
+			<th>
+				Material
+			</th>
+			<th>
+				Number of stars
+			</th>
+		</tr>
+		<% @balls.each do |b| %>
+			<tr>
+				<td>
+					<%= b.name %>
+				</td>
+				<td>
+					<%= b.material %>
+				</td>
+				<td>
+					<%= b.stars %>
+				</td>
+				<td>
+					<%= link_to 'show', ball_path(b) %>
+				</td>
+				<td>
+					<%= link_to 'edit', edit_ball_path(b) %>
+				</td>
+				<td>
+					<%= link_to 'destroy', ball_path(b),
+					method: :delete,
+					data: {confirm: 'go'} %>
+				</td>
+			</tr>
+		<% end %>
+	</table>
+	
+	<%= link_to 'new', new_ball_path %>

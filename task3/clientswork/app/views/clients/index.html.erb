@@ -1,0 +1,45 @@
+<h1>all clients </h1>
+
+<table>
+	<tr>
+		<th>
+			name
+		</th>
+		<th>
+			lastname
+		</th>
+		<th>
+			firm
+		</th>
+	</tr>
+	<% @clients.each do |c| %>
+		<tr>
+			<td>
+				<%= c.name %>
+			</td>
+			<td>
+				<%= c.lastname %>
+			</td>
+			<td>
+				<%= c.firm %>
+			</td>
+			<td>
+				<%= link_to 'show', client_path(c) %>
+			</td>
+			<td>
+				<%= link_to 'edit', edit_client_path(c) %>
+			</td>
+			<td>
+				<%= link_to 'destroy', client_path(c),
+				method: :delete,
+				data: {confirm: 'yes?'} %>
+			</td>
+		</tr>
+		
+	
+	
+	<% end %>
+
+</table>
+
+<%= link_to 'new', new_client_path %>

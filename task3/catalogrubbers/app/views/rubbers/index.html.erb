@@ -1,0 +1,43 @@
+<h1> index rubbers </h1>
+
+<table>
+	<tr>
+		<th>
+			name
+		</th>
+		<th>
+			color
+		</th>
+		<th>
+			pimples in
+		</th>
+	</tr>
+	<% @rubbers.each do |r| %>
+			<tr>
+				<td>
+					<%= r.name %>
+				</td>
+				<td>
+					<%= r.color %>
+				</td>
+				<td>
+					<%= r.piples_in %>
+				</td>
+				<td>
+					<%= link_to 'show', rubber_path(r) %>
+				</td>
+				<td>
+					<%= link_to 'edit', edit_rubber_path(r) %>
+				</td>
+				<td>
+					<%= link_to 'destroy', rubber_path(r),
+					method: :delete,
+					data: {confirm: 'ewq'} %>
+				</td>
+			</tr>
+	<% end %>
+		
+
+</table>
+
+<%= link_to 'new', new_rubber_path %>

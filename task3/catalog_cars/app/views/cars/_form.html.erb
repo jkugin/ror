@@ -1,0 +1,14 @@
+<%= form_for @car do |c| %>
+<p>
+	<%= c.label :name %>
+	<%= c.text_field :name %>
+</p>
+<p>
+	<%= c.label :price %>
+	<%= c.number_field :price %>
+</p>
+<p>
+	<%= c.submit %>
+</p>
+<% end %>
+

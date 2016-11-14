@@ -1,0 +1,17 @@
+<%= form_for @condom do |c| %>
+	<p>
+		<%= c.label :label %>
+		<%= c.text_field :name %>
+	</p>
+	<p>
+		<%= c.label :length %>
+		<%= c.number_field :length %>
+	</p>
+	<p>
+		<%= c.label :price %>
+		<%= c.number_field :price %>
+ 	</p>
+ 	<p>
+		<%= c.submit %>
+ 	</p>
+<% end %>

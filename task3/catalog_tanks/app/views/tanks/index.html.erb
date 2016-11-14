@@ -1,0 +1,36 @@
+<table>
+	<tr>
+		<th>
+			tankname
+		</th>
+		<th>
+			gun
+		</th>
+	</tr>
+	<% @tanks.each do |t| %>
+		<tr>
+			<td>
+				<%= t.tankname %>
+			</td>
+			<td>
+				<%= t.gun %>
+			</td>
+			<td>
+				<%= link_to 'show', tank_path(t) %>
+			</td>
+			<td>
+				<%= link_to 'edit', edit_tank_path(t) %>
+			</td>
+			<td>
+				<%= link_to 'destroy', tank_path(t),
+				method: :delete,
+				data: {confirm: 'yes?'} %>
+			</td>
+		</tr>
+	<% end %>
+
+</table>
+
+
+<%= link_to 'newtank', new_tank_path %>
+

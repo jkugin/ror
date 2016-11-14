@@ -1,0 +1,17 @@
+<%= form_for @processor do |p| %>
+<p>
+	<%= p.label :name %>
+	<%= p.text_field :name %>
+</p>
+<p>
+	<%= p.label :friquency %>
+	<%= p.number_field :friquency %>
+</p>
+<p>
+	<%= p.label :gpu %>
+	<%= p.check_box :gpu %>
+</p>
+<p>
+	<%= p.submit %>
+</p>
+<% end %>

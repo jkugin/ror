@@ -1,0 +1,37 @@
+<h1> catalog </h1>
+
+<table>
+	<tr>
+		<th>
+			name
+		</th>
+		<th>
+			price
+		</th>
+	</tr>
+	<% @cars.each do |c| %>
+		<tr>
+			<td>
+				<%= c.name %>
+			</td>
+			<td>
+				<% c.price %>
+			</td>
+			<td>
+				<%= link_to 'show', car_path(c) %>
+			</td>
+			<td>
+				<%= link_to 'edit', edit_car_path(c) %>
+			</td>
+			<td>
+				<%= link_to 'destroy', car_path(c),
+				method: :delete,
+				data: {confirm: 'yes?'} %>
+			</td>
+		</tr>
+	<% end %>
+</table>
+
+<%= link_to 'new', new_car_path %>
+
+

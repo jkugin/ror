@@ -1,0 +1,43 @@
+<h1>textiles</h1>
+
+<table>
+	<tr>
+		<th>
+			color
+		</th>
+		<th>
+			material
+		</th>
+		<th>
+			price
+		</th>
+	</tr>
+	
+	<% @textiles.each do |t| %>
+			<tr>
+				<td>
+					<%= t.color %>
+				</td>
+				<td>
+					<%= t.material %>
+				</td>
+				<td>
+					<%= t.price %>
+				</td>
+				<td>
+					<%= link_to 'show', textile_path(t) %>
+				</td>
+				<td>
+					<%= link_to 'edit', edit_textile_path(t) %>
+				</td>
+				<td>
+					<%= link_to 'delete', textile_path(t),
+					method: :delete,
+					data: {confirm: 'yes?'} %>
+				</td>
+			</tr>
+	<% end %>
+
+</table>
+
+<%= link_to 'new', new_textile_path %>

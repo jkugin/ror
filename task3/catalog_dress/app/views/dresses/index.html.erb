@@ -1,0 +1,42 @@
+<h1>catalog </h1>
+
+<table>
+	<tr>
+		<th>
+			name
+		</th>
+		<th>
+			size
+		</th>
+		<th>
+			in_stock
+		</th>
+	</tr>
+	<% @dresses.each do |d| %>
+		<tr>
+			<td>
+				<%= d.name %>
+			</td>
+			<td>
+				<%= d.size %>
+			</td>
+			<td>
+				<%= d.in_stock %>
+			</td>
+			<td>
+				<%= link_to 'show', dress_path(d) %>
+			</td>
+			<td>
+				<%= link_to 'edit', edit_dress_path(d) %>
+			</td>
+			<td>
+				<%= link_to 'destroy', dress_path(d),
+				method: :delete,
+				data: {confirm: 'yes?'} %>
+			</td>
+		</tr>
+	<% end %>
+</table>
+
+
+<%= link_to 'new', new_dress_path %>

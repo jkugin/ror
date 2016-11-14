@@ -1,0 +1,22 @@
+<h1>Sign_up</h1>
+
+
+<%= form_for @user do |u| %>
+	<p>
+		<%= u.label :username %>
+		<%= u.text_field :username %>
+	</p>
+
+	<p>
+		<%= u.label :password %>
+		<%= u.password_field :password %>
+	</p>
+
+	
+
+	<%= u.submit %>
+<% end %>
+
+<p>
+	<%= link_to 'Sign in', sign_in_path %>
+</p>

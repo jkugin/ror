@@ -1,0 +1,17 @@
+<%= form_for @textile do |t| %>
+	<p>
+		<%= t.label :color %>
+		<%= t.text_field :color %>
+	</p>
+	<p>
+		<%= t.label :material %>
+		<%= t.text_field :material %>
+	</p>
+	<p>
+		<%= t.label :price %>
+		<%= t.number_field :price %>
+	</p>
+	<p>
+		<%= t.submit %>
+	</p>
+<% end %>

@@ -1,0 +1,15 @@
+<%= form_for @cup do |t| %>
+<p>
+	<%= t.label :material %>
+	<%= t.text_field :material %>
+</p>
+<p>
+	<%= t.label :price %>
+	<%= t.number_field :price %>
+</p>
+<p>
+	<%= t.submit 'drink cup' %>
+</p>
+<% end %>
+
+<%= link_to 'catalog', cups_path %>

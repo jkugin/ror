@@ -1,0 +1,18 @@
+<%= form_for @dress do |d| %>
+
+<p>
+	<%= d.label :name %>
+	<%= d.text_field :name %>
+</p>
+<p>
+	<%= d.label :size %>
+	<%= d.number_field :size %>
+</p>
+<p>
+	<%= d.label :in_stock %>
+	<%= d.check_box :in_stock %>
+</p>
+<p>
+	<%= d.submit %>
+</p>
+<% end %>

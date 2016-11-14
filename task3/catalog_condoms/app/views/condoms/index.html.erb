@@ -1,0 +1,42 @@
+<h1>index catalog condoms</h1>
+
+<table>
+	<tr>
+		<th>
+			name
+		</th>
+		<th>
+			lenght
+		</th>
+		<th>
+			price
+		</th>
+	</tr>
+	<% @condoms.each do |c| %>
+		<tr>
+			<td>
+				<%= c.name %>
+			</td>
+			<td>
+				<%= c.length %>
+			</td>
+			<td>
+				<%= c.price %>
+			</td>
+			<td>
+				<%= link_to 'show', condom_path(c) %>
+			</td>
+			<td>
+				<%= link_to 'edit', edit_condom_path(c) %>
+			</td>
+			<td>
+				<%= link_to 'destroy', condom_path(c),
+				method: :delete,
+				data: {confirm: 'wer'} %>
+			</td>
+		</tr>
+	<% end %>
+
+</table>
+
+<%= link_to 'new', new_condom_path %>

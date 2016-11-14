@@ -1,0 +1,43 @@
+<p> blades </p>
+
+<%= link_to 'new', new_blade_path %>
+
+<table>
+	<tr>
+		<th>
+			Name
+		</th>
+		<th>
+			Speed
+		</th>
+		<th>
+			Number of layers
+		</th>
+	</tr>
+	
+	<% @blades.each do |blade| %>
+		<tr>
+			<td>
+				<%= blade.name %>
+			</td>
+			<td>
+				<%= blade.speed %>
+			</td>
+			<td>
+				<%= blade.number_of_layers %>
+			</td>
+			<td>
+				<%= link_to 'Edit', edit_blade_path(blade) %>
+			</td>
+			<td>
+				<%= link_to 'Show', blade_path(blade) %>
+			</td>
+			<td>
+				<%= link_to 'delate', blade_path(blade),
+				method: :delete,
+				data: { confirm: 'what?'}%>
+			</td>
+		</tr>
+	<% end %>
+</table>
+

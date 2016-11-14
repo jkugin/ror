@@ -1,0 +1,41 @@
+<h1> catalog </h1>
+
+<table>
+	<tr>
+		<th>
+			name
+		</th>
+		<th>
+			friquency
+		</th>
+		<th>
+			gpu
+		</th>
+	</tr>
+	<% @processors.each do |p| %>
+		<tr>
+			<td>
+				<%= p.name %>
+			</td>
+			<td>
+				<%= p.friquency %>
+			</td>
+			<td>
+				<%= p.gpu %>
+			</td>
+			<td>
+				<%= link_to 'show', processor_path(p) %>
+			</td>
+			<td>
+				<%= link_to 'edit', edit_processor_path(p) %>
+			</td>
+			<td>
+				<%= link_to 'destroy', processor_path(p),
+				method: :delete,
+				data: {confirm: 'yes?'} %>
+			</td>
+		</tr>
+	<% end %>
+</table>
+
+<%= link_to 'new', new_processor_path %>

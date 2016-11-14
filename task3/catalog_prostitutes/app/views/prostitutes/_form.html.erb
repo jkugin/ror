@@ -1,0 +1,17 @@
+<%= form_for @prostitute do |p| %>
+<p>
+	<%= p.label :name %>
+	<%= p.text_field :name %>
+</p>
+<p>
+	<%= p.label :age %>
+	<%= p.number_field :age %>
+</p>
+<p>
+	<%= p.label :price %>
+	<%= p.number_field :price %>
+</p>
+<p>
+	<%= p.submit %>
+</p>
+<% end %>

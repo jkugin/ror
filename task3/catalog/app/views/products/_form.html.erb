@@ -1,0 +1,17 @@
+<%= form_for @product do |f| %>
+	<p>
+		<%= f.label :partnumber %>
+		<%= f.text_field :partnumber %>
+	</p>
+	<p>
+		<%= f.label :name %>
+		<%= f.text_field :name %>
+	</p>
+	<p>
+		<%= f.label :discount_cod %>
+		<%= f.text_field :discount_cod %>
+	</p>
+	<p>
+		<%= f.submit %>
+	</p>
+<% end %>

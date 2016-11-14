@@ -1,0 +1,43 @@
+<p> footballers </p>
+
+<%= link_to 'new', new_footballer_path %>
+
+<table>
+	<tr>
+		<th>
+			Name
+		</th>
+		<th>
+			Age
+		</th>
+		<th>
+			Club
+		</th>
+	</tr>
+	
+	<% @footballers.each do |footballer| %>
+		<tr>
+			<td>
+				<%= footballer.name %>
+			</td>
+			<td>
+				<%= footballer.age %>
+			</td>
+			<td>
+				<%= footballer.club %>
+			</td>
+			<td>
+				<%= link_to 'Edit', edit_footballer_path(footballer) %>
+			</td>
+			<td>
+				<%= link_to 'Show', footballer_path(footballer) %>
+			</td>
+			<td>
+				<%= link_to 'destroy', footballer_path(footballer),
+				method: :delete,
+				data: { confirm: 'puk?'}%>
+			</td>
+		</tr>
+	<% end %>
+</table>
+

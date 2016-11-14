@@ -1,0 +1,36 @@
+<table>
+	<tr>
+		<th>
+			material
+		</th>
+		<th>
+			price
+		</th>
+	</tr>
+	<% @cups.each do |c| %>
+		<tr>
+			<td>
+				<%= c.material %>
+			</td>
+			<td>
+				<%= c.price %>
+			</td>
+			<td>
+				<%= link_to 'show', cup_path(c) %>
+			</td>
+			<td>
+				<%= link_to 'edit', edit_cup_path(c) %>
+			</td>
+			<td>
+				<%= link_to 'destroy', cup_path(c),
+				method: :delete,
+				data: {confirm: 'yes?'} %>
+			</td>
+		</tr>
+	<% end %>
+
+</table>
+
+
+<%= link_to 'newcup', new_cup_path %>
+
